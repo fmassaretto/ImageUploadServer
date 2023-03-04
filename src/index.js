@@ -32,7 +32,10 @@ const server = http.createServer((req, res) => {
       res.end('404');
     }
   });
+
+  const port = 8080
   
-  server.listen(8080, () => {
-    console.log('Server listening on http://localhost:8080 ...');
+  server.listen(port, () => {
+
+    console.log(`Server listening on ${server.address().address}:${port} ...`);
   });
